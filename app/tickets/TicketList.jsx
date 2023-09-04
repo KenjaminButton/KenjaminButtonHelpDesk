@@ -3,7 +3,7 @@ import Link from "next/link"
 async function getTickets() {
   // Imitate delay to test loading suspense fallback
   // 3 second delay
-  await new Promise(resolve => setTimeout(resolve, 3000))
+  // await new Promise(resolve => setTimeout(resolve, 3000))
 
 
   const res = await fetch('http://localhost:4000/tickets', {
