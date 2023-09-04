@@ -34,6 +34,13 @@
       "priority": "low",
       "user_email": "kimseokjim@bts.dev",
       "id": "ghsh2P3"
+    },
+    {
+      "title": "How do I open my terminal on a Mac?",
+      "body": "I asked CHATGPT and it said \"Command + Space\" and type \"terminal\", but I can't spell any of that. =(",
+      "priority": "medium",
+      "user_email": "kimseokjim@bts.dev",
+      "id": "H2I7mF5"
     }
   ]
 }
