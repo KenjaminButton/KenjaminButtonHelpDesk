@@ -4,6 +4,18 @@ import {notFound} from 'next/navigation'
 // if a request comes in for a ticket id that hasn't been rendered, we can return a 404 page
 export const dynamicParams = true
 
+// Dynamic "dynamic" meta data using generateMetaData
+export async function generateMetadata({params}) {
+  const id = params.id
+
+  const res = await fetch(`http://localhost:4000/tickets/${id}`)
+  const ticket = await res.json()
+
+  return {
+    title: `${ticket.title}`
+  }
+}
+
 // Get a list of all id (tickets) at build time and generate a static page (and generate all the routes) for all of them pre-rendered during build
 export async function generateStaticParams() {
   // [{id: '1'}, {id: '2'}, ...]

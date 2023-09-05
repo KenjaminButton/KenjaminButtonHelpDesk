@@ -2,6 +2,10 @@ import { Suspense } from "react";
 import TicketList from "./TicketList";
 import Loading from "../loading";
 
+export const metadata = {
+  title: 'KenjaminButton Help Desk | Tickets',
+}
+
 export default function Tickets() {
   return (
     <main>
