@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Logo from './kenjamin-dojo.png'
+import LogoutButton from './LogoutButton'
 
 export default function Navbar({user}) {
   return (
@@ -14,9 +15,11 @@ export default function Navbar({user}) {
       />
       <h1>Kenjamin Button Help Desk</h1>
       <Link href="/">Dashboard</Link>
-      <Link href="/tickets">Tickets</Link>
+      <Link className='mr-auto' href="/tickets">Tickets</Link>
 
       {user && <span>Hello, {user.email}</span>}
+      
+      <LogoutButton />
     </nav>
   )
 }
